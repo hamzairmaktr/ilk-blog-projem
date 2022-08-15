@@ -149,9 +149,9 @@ footer{
 }
 
 .footer-content{
-	display: inline-block;
+	display: flex;
 	width: 60%;
-	text-align: center;
+	align-items: center;
 }
 
 
@@ -199,14 +199,12 @@ footer{
 .icons{
 	display: inline-block;
     position: relative;
-    right: -170px;
+    right: -127px;
 }
 
 .footer-hak{
-	display: inline-block;
-    float: left;
-    position: relative;
-    top: 15px;
+	display: flex;
+   
     color: white;
     font-size: 20px;
 }
