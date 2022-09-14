@@ -37,17 +37,24 @@ header{
 }
 
 .header-content{
-	display: inline-block;
+	display: flex;
 	width: 60%;
-	text-align: center;
+	justify-content: space-between;
 }
 
 header .logo{
 	display: inline-block;
 	margin-left: 10px;
 }
+header .logo p{
+	font-size: 20px;
+	color: #fff;
+}
+header .logo span{
+	color: cyan;
+}
 
-header .logo a,header nav ul li a{
+header nav ul li a{
 	text-decoration: none;
 	color: white;
 	font-size: 18px;
@@ -55,9 +62,7 @@ header .logo a,header nav ul li a{
 }
 
 header nav{
-	display: inline-block;
-	width: calc(100% - 132px);
-	text-align: right;
+	margin-right: 10px;
 }
 
 header nav ul{
@@ -68,8 +73,11 @@ header nav ul li{
 	display: inline-block;
 	padding-left: 8px;
 }
+header a{
+	transition:border .5s;
+}
 header a:hover{
-	opacity: 0.8;
+	border-bottom: #fff solid 1px;
 }
 
 main{
@@ -81,10 +89,11 @@ main{
 }
 
 .content{
-	display: inline-block;
+	display: flex;
+	flex-direction: column;
+	align-self: center;
 	width: 60%;
-	min-height: 300px;
-	text-align: center;
+	min-height: 300px;	
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	margin-top:86px ;
 	margin-bottom: 10px;
@@ -94,6 +103,11 @@ main{
 .content img{
 	width: 100%;
 	object-fit: cover;
+}
+
+.content-makaleler{
+	margin: 0 10px;
+	margin-bottom:5px;
 }
 
 .content h1{
@@ -114,29 +128,7 @@ main{
 	margin-left: 10px;
 }
 
-.bizeulas{
-	background-color: brown;
-	width: 10px;
-}
 
-.bizeulas a{
-	text-decoration: none;
-	color: whitesmoke;
-}
-.bizeulas a p{
-	width: 51px;
-    word-wrap: break-word;
-    font-family: monospace;
-    white-space: pre-wrap;
-    position: fixed;
-    right: -8px;
-    top: 162px;
-    background-color: brown;
-}
-
-.bizeulas a p:hover{
-	opacity: 0.6;
-}
 
 footer{
 	display: flex;
@@ -150,6 +142,8 @@ footer{
 
 .footer-content{
 	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
 	width: 60%;
 	align-items: center;
 }
@@ -198,13 +192,10 @@ footer{
 
 .icons{
 	display: inline-block;
-    position: relative;
-    right: -127px;
 }
 
 .footer-hak{
 	display: flex;
-   
     color: white;
     font-size: 20px;
 }
